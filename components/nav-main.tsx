@@ -11,6 +11,13 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
+import {
+  
+  IconDeviceDesktop,
+} from "@tabler/icons-react"
+import Link from "next/link"
+
+
 export function NavMain({
   items,
 }: {
@@ -37,19 +44,21 @@ export function NavMain({
               className="size-8 group-data-[collapsible=icon]:opacity-0"
               variant="outline"
             >
-              <IconMail />
+              <IconDeviceDesktop />
               <span className="sr-only">Inbox</span>
             </Button>
           </SidebarMenuItem>
         </SidebarMenu>
         <SidebarMenu>
           {items.map((item) => (
+           <Link href={item.url} key={item.title}>
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton tooltip={item.title}>
                 {item.icon && <item.icon />}
                 <span>{item.title}</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
+         </Link>
           ))}
         </SidebarMenu>
       </SidebarGroupContent>

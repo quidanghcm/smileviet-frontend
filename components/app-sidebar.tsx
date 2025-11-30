@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import {
+  IconBrandSketch,
   IconCamera,
   IconChartBar,
   IconDashboard,
@@ -17,6 +18,7 @@ import {
   IconSearch,
   IconSettings,
   IconUsers,
+  IconReportMoney
 } from "@tabler/icons-react"
 
 import { NavDocuments } from "@/components/nav-documents"
@@ -35,8 +37,8 @@ import {
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "admin",
+    email: "admin@smileviet.com",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
@@ -46,25 +48,21 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Categories",
+      url: "/dashboard/categories",
       icon: IconListDetails,
     },
     {
-      title: "Analytics",
+      title: "Products",
       url: "#",
       icon: IconChartBar,
     },
     {
-      title: "Projects",
+      title: "Sales",
       url: "#",
-      icon: IconFolder,
+      icon: IconReportMoney,
     },
-    {
-      title: "Team",
-      url: "#",
-      icon: IconUsers,
-    },
+  
   ],
   navClouds: [
     {
@@ -117,34 +115,25 @@ const data = {
   navSecondary: [
     {
       title: "Settings",
-      url: "#",
+      url: "/dashboard/settings",
       icon: IconSettings,
     },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: IconHelp,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: IconSearch,
-    },
+   
   ],
   documents: [
     {
-      name: "Data Library",
-      url: "#",
+      name: "Today Sales",
+      url: "/today",
       icon: IconDatabase,
     },
     {
-      name: "Reports",
-      url: "#",
+      name: "Weekly Sales",
+      url: "/week",
       icon: IconReport,
     },
     {
-      name: "Word Assistant",
-      url: "#",
+      name: "Monthly Sales",
+      url: "/month",
       icon: IconFileWord,
     },
   ],
@@ -161,7 +150,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
               <a href="#">
-                <IconInnerShadowTop className="!size-5" />
+                <IconBrandSketch className="!size-5" />
                 <span className="text-base font-semibold">Smileviet - Quản lý tour</span>
               </a>
             </SidebarMenuButton>
