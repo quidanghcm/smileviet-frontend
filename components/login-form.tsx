@@ -27,7 +27,7 @@ export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [formData, setFormData] = useState({ username: "", password: "" });
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -43,13 +43,13 @@ export function LoginForm({
 
     const res = await signIn("credentials", {
       redirect: false,
-      email: formData.email,
+      username: formData.username,
       password: formData.password,
     });
 
     if (res?.ok) {
       toast.success("Đăng nhập thành công");
-      router.push("/dashboard");
+      router.push("./");
     } else {
       toast.error("Thông tin đăng nhập chưa chính xác");
     }
@@ -74,12 +74,12 @@ export function LoginForm({
           <form onSubmit={handleLogin} className="grid gap-6">
             <FieldGroup>
               <Field>
-                <FieldLabel htmlFor="email">Tài khoản</FieldLabel>
+                <FieldLabel htmlFor="username">Tài khoản</FieldLabel>
                 <Input
-                  id="email"
+                  id="username"
                   type="text"
-                  name="email"
-                  value={formData.email}
+                  name="username"
+                  value={formData.username}
                   onChange={handleChange}
                   required
                 />

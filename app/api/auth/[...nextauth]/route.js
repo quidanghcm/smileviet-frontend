@@ -6,7 +6,7 @@ const handler = NextAuth({
     Credentials({
       name: "Smileviet",
       credentials: {
-        email: { label: "Email", type: "email" },
+        username: { label: "Username", type: "text" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
@@ -20,7 +20,7 @@ const handler = NextAuth({
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              identifier: credentials.email,
+              identifier: credentials.username,
               password: credentials.password,
             }),
           }
