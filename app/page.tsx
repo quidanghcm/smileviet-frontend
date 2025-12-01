@@ -8,7 +8,7 @@ export default function Home() {
           className="dark:invert"
           src="/smileviet.svg"
           alt="Smileviet logo"
-          width={100}
+          width={200}
           height={20}
           priority
         />
@@ -17,27 +17,27 @@ export default function Home() {
             Phần mềm quản lý tour
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Hệ thống đang được cập nhật{" "}
+           Phiên bản đang được {" "}
             <a
               href="./"
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
-              Dữ liệu
+              cập nhật
             </a>{" "}
             và{" "}
             <a
               href="./"
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
-              Kết nối
+              demo
             </a>{" "}
-            đến nền tảng trung tâm.
+            trong giai đoạn phát triển. Vui lòng quay lại sau!
           </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="./"
+            href="./login"
           
             rel="noopener noreferrer"
           >
