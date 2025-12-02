@@ -1,14 +1,17 @@
-import { GalleryVerticalEnd } from "lucide-react"
-
+import "@/styles/login-effects.css"
 import { LoginForm } from "@/components/login-form"
 
 export default function LoginPage() {
   return (
-    <div className="bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
-      <div className="flex w-full max-w-sm flex-col gap-6">
-    
-        <LoginForm />
+    <div className="sv-wrapper bg-muted/30">
+
+      {/* Hiệu ứng nền vòng tròn */}
+      <div className="sv-flow-lines">
+        <div></div><div></div><div></div>
       </div>
+
+      {/* Form đăng nhập + glow + logo */}
+      <LoginForm />
     </div>
   )
 }
